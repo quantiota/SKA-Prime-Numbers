@@ -59,12 +59,20 @@ def find_sign_change_intersections(cumsum_cos, cumsum_sin):
     
     return np.array(intersections)
 
-def find_prime_intersections(limit, tolerance=1e-6, use_interpolation=True):
-    print(f"Generating primes up to {limit}...")
-    primes = sieve_of_eratosthenes(limit)
-    print(f"Found {len(primes)} primes. Computing transformations...")
-    
-    pct_change, cumsum_pct, cos_cumsum, sin_cumsum, cumsum_cos, cumsum_sin = compute_transformations(primes)
+def find_prime_intersections(limit, tolerance=1e-6, use_interpolation=True, csv_file=None):
+    if csv_file:
+        print(f"Loading data from CSV file: {csv_file}")
+        df = pd.read_csv(csv_file)
+        primes = df['Prime'].values
+        cumsum_cos = df['Cumsum_of_Cosine'].values
+        cumsum_sin = df['Cumsum_of_Sine'].values
+        print(f"Loaded {len(primes)} prime data points from CSV")
+    else:
+        print(f"Generating primes up to {limit}...")
+        primes = sieve_of_eratosthenes(limit)
+        print(f"Found {len(primes)} primes. Computing transformations...")
+        
+        pct_change, cumsum_pct, cos_cumsum, sin_cumsum, cumsum_cos, cumsum_sin = compute_transformations(primes)
     
     print("Finding intersections where cumsum_cosine ≈ cumsum_sine...")
     
@@ -112,7 +120,10 @@ def find_prime_intersections(limit, tolerance=1e-6, use_interpolation=True):
     # Create DataFrame
     if intersection_data:
         df_intersections = pd.DataFrame(intersection_data)
-        output_csv = f"prime_intersections_{limit}.csv"
+        if csv_file:
+            output_csv = f"prime_intersections_{csv_file.replace('.csv', '').split('_')[-1]}.csv"
+        else:
+            output_csv = f"prime_intersections_{limit}.csv"
         df_intersections.to_csv(output_csv, index=False)
         print(f"Saved {len(intersection_data)} intersections to: {output_csv}")
         
@@ -158,7 +169,8 @@ def find_prime_intersections(limit, tolerance=1e-6, use_interpolation=True):
         intersection_values = [d['Cumsum_Cosine'] for d in plot_intersections[:50]]
     
     ax1.scatter(intersection_primes, intersection_values, color='green', s=20, zorder=5, label=f'Intersections ({len(intersection_data)} total)')
-    ax1.set_title(f"Cumulative Sums with Intersections (Primes up to {limit})")
+    title_suffix = f"CSV: {csv_file}" if csv_file else f"Primes up to {limit}"
+    ax1.set_title(f"Cumulative Sums with Intersections ({title_suffix})")
     ax1.set_xlabel("Prime Number")
     ax1.set_ylabel("Cumulative Sum Values")
     ax1.grid(True, alpha=0.3)
@@ -199,14 +211,19 @@ def find_prime_intersections(limit, tolerance=1e-6, use_interpolation=True):
         ax4.grid(True, alpha=0.3)
     
     plt.tight_layout()
-    plt.savefig(f"prime_intersections_analysis_{limit}.png")
-    print(f"Saved analysis plot: prime_intersections_analysis_{limit}.png")
+    if csv_file:
+        plot_name = f"prime_intersections_analysis_{csv_file.replace('.csv', '').split('_')[-1]}.png"
+    else:
+        plot_name = f"prime_intersections_analysis_{limit}.png"
+    plt.savefig(plot_name)
+    print(f"Saved analysis plot: {plot_name}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Find intersections where cumsum_cosine equals cumsum_sine for prime analysis.")
     parser.add_argument("--limit", type=int, default=1000000, help="Upper limit for prime number generation")
     parser.add_argument("--tolerance", type=float, default=1e-6, help="Tolerance for intersection detection")
     parser.add_argument("--no-interpolation", action="store_true", help="Disable interpolation-based intersection finding")
+    parser.add_argument("--csv", type=str, help="Path to existing CSV file with prime data")
     args = parser.parse_args()
     
-    find_prime_intersections(args.limit, args.tolerance, not args.no_interpolation)
+    find_prime_intersections(args.limit, args.tolerance, not args.no_interpolation, args.csv)
