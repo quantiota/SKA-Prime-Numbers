@@ -29,7 +29,7 @@ $$
 
 ##  Why this is surprising
 
-Prime gaps are known to behave irregularly. However, through transformations like $f(n)$, we begin to see **bounded wave-like structures** emerge—suggesting that what appears to be randomness may in fact conceal **hidden phase regularities**.
+Prime gaps are known to behave irregularly. However, through transformations like $\large f(n)$, we begin to see **bounded wave-like structures** emerge—suggesting that what appears to be randomness may in fact conceal **hidden phase regularities**.
 
 This challenges classical assumptions and opens new interdisciplinary possibilities, linking number theory, signal processing, and information geometry.
 
