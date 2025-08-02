@@ -55,7 +55,7 @@ These serve as the **feature trajectory** over which SKA will operate, offering 
 
 ## Why This Is Surprising
 
-Prime gaps are famously irregular. However, by applying SKA and constructing transforms such as $f(n)$, $x_k$, and $y_k$, we begin to see **bounded, wave-like patterns** emerge.
+Prime gaps are famously irregular. However, by applying SKA and constructing transforms such as $\large f(n)$, $\large x_k$, and $\large y_k$, we begin to see **bounded, wave-like patterns** emerge.
 
 This suggests that what appears to be randomness may conceal **hidden phase regularities**—challenging classical assumptions and opening new interdisciplinary pathways between number theory, signal processing, and information geometry.
 
