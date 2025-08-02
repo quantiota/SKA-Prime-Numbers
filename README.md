@@ -42,7 +42,7 @@ $$
 $$
      \Largex_k = \sum_{i=1}^{k} \cos\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
      \quad,\quad
-     \Large y_k = \sum_{i=1}^{k} \sin\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
+      y_k = \sum_{i=1}^{k} \sin\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
 $$
 
      These serve as the **feature trajectory** over which SKA will operate, offering a geometric embedding of prime information.
