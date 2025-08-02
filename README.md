@@ -5,6 +5,21 @@ This project explores a radically new approach to understanding the prime number
 
 Unlike traditional number theory, which analyzes prime properties in a static or retrospective manner, this repository initiates a **real-time learning process** over the sequence of primes, with the goal of uncovering **hidden dynamics**, **regime transitions**, and **information structures** encoded in their progression.
 
+## Clarifying "Real-Time Learning" in SKA
+
+This project uses the term **“real-time learning”** not in the traditional sense of dynamic, time-stamped input, but to emphasize a **step-by-step, forward-only accumulation of information** over the prime number sequence.
+
+In contrast to batch-style, retrospective analysis:
+
+- **SKA processes primes one by one**, updating internal knowledge at each step,
+- without revisiting earlier data or requiring access to the full sequence.
+
+This mimics **temporal learning**, though “time” here refers to **symbolic sequence position** (index $n$) rather than physical time.
+
+> **Key Insight:** This allows us to model prime numbers as an *informational stream*—letting structure emerge purely through accumulation.
+
+
+
 ##  Objectives
 
 - Develop **real-time learning algorithms** to track evolving information in the prime number sequence.
@@ -29,7 +44,9 @@ $$
 
 Here is a polished version of your `README.md` file for the repository **SKA Prime Numbers**, including a `Structure` section placeholder and a touch of formatting refinement to enhance readability:
 
----
+
+
+
 
 # SKA Prime Numbers: Real-Time Learning of the Prime Sequence
 
@@ -60,8 +77,6 @@ This suggests that what appears to be randomness may conceal **hidden phase regu
 * [ ] Launch real-time SKA learning on both features
 * [ ] Add live visualizations of entropy and cosine evolution
 * [ ] Explore **phase portraits** and **Fourier projections** of $\large f(n)$
-
-
 
 
 
