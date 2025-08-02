@@ -45,19 +45,6 @@ $$
 Here is a polished version of your `README.md` file for the repository **SKA Prime Numbers**, including a `Structure` section placeholder and a touch of formatting refinement to enhance readability:
 
 
-
-
-
-# SKA Prime Numbers: Real-Time Learning of the Prime Sequence
-
-This project explores a radically new approach to understanding prime numbers through the lens of **Structured Knowledge Accumulation (SKA)**—a forward-only, entropy-driven learning framework.
-
-Unlike traditional number theory, which analyzes prime properties in a static or retrospective manner, this repository initiates a **real-time learning process** over the sequence of primes, aiming to uncover **hidden dynamics**, **regime transitions**, and **information structures** encoded in their progression.
-
-
-
-
-
 ##  Why This Is Surprising
 
 Prime gaps are famously irregular. However, by applying SKA and constructing transforms such as $\large f(n)$, we begin to see **bounded, wave-like patterns** emerge.
