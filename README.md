@@ -31,24 +31,33 @@ $$
 \Large \frac{P_{k+1} - P_k}{P_k}
 $$
 
-2. **Oscillatory function:**
+2. **One-dimensional oscillatory projection:**
 
-$$
-\Large f(n) = \sum_{k=1}^{n} \cos\left( \sum_{j=1}^{k} \frac{P_{j+1} - P_j}{P_j} \right)
-$$
+     $$
+     f(n) = \sum_{k=1}^{n} \cos\left( \sum_{j=1}^{k} \frac{P_{j+1} - P_j}{P_j} \right)
+     $$
 
+3. **Two-dimensional phase features:**
 
+     $$
+     x_k = \sum_{i=1}^{k} \cos\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
+     \quad,\quad
+     y_k = \sum_{i=1}^{k} \sin\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
+     $$
+
+     These serve as the **feature trajectory** over which SKA will operate, offering a geometric embedding of prime information.
 
 - Compare SKA learning trajectories over different feature representations.
+
 - Examine **entropy evolution** and **alignment metrics** for uncovering latent order or geometric resonance in prime distributions.
 
 
-##  Why This Is Surprising
 
-Prime gaps are famously irregular. However, by applying SKA and constructing transforms such as $\large f(n)$, we begin to see **bounded, wave-like patterns** emerge.
+## Why This Is Surprising
+
+Prime gaps are famously irregular. However, by applying SKA and constructing transforms such as $f(n)$, $x_k$, and $y_k$, we begin to see **bounded, wave-like patterns** emerge.
 
 This suggests that what appears to be randomness may conceal **hidden phase regularities**—challenging classical assumptions and opening new interdisciplinary pathways between number theory, signal processing, and information geometry.
-
 
 
 ##  Structure (Initial)
@@ -58,10 +67,11 @@ This suggests that what appears to be randomness may conceal **hidden phase regu
 
 ## Next Steps
 
-* [ ] Compute the defined features over an initial range of primes
-* [ ] Launch real-time SKA learning on both features
-* [ ] Add live visualizations of entropy and cosine evolution
-* [ ] Explore **phase portraits** and **Fourier projections** of $\large f(n)$
+* [x] Build and validate the prime-based feature transformations $\large f(n), x_k, y_k$
+* [ ] Launch real-time SKA learning over the feature stream
+* [ ] Add visualizations of entropy, alignment, and trajectory evolution
+* [ ] Explore **phase portraits** and **Fourier projections** of $x_k, y_k$ trajectory
+* [ ] Investigate deeper links between prime geometry and dynamical systems
 
 
 
