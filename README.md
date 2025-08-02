@@ -25,13 +25,13 @@ This mimics **temporal learning**, though “time” here refers to **symbolic s
 - Develop **real-time learning algorithms** to track evolving information in the prime number sequence.
 - Define **novel features** on primes for SKA processing:
 
-  1. **Percentage gap changes:**
+1. **Percentage gap changes:**
 
 $$
 \Large \frac{P_{k+1} - P_k}{P_k}
 $$
 
-  2. **Oscillatory function:**
+2. **Oscillatory function:**
 
 $$
 \Large f(n) = \sum_{k=1}^{n} \cos\left( \sum_{j=1}^{k} \frac{P_{j+1} - P_j}{P_j} \right)
