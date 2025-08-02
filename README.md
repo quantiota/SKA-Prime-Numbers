@@ -12,11 +12,15 @@ Unlike traditional number theory, which analyzes prime properties in a static or
 
   1. **Percentage gap changes:**
 
-     $$\Large \frac{P_{k+1} - P_k}{P_k}$$
+    $$
+    \Large \frac{P_{k+1} - P_k}{P_k}
+    $$
 
   2. **Oscillatory function:**
 
-     $$\Large f(n) = \sum_{k=1}^{n} \cos\left( \sum_{j=1}^{k} \frac{P_{j+1} - P_j}{P_j} \right)$$
+     $$
+     \Large f(n) = \sum_{k=1}^{n} \cos\left( \sum_{j=1}^{k} \frac{P_{j+1} - P_j}{P_j} \right)
+     $$
 
      capturing cumulative angular distortion of prime gaps.
 
