@@ -27,18 +27,20 @@ This mimics **temporal learning**, though “time” here refers to **symbolic s
 
 1. **Percentage gap changes:**
 
-$$\Large \frac{P_{k+1} - P_k}{P_k}$$
+$$
+\Large \frac{P_{k+1} - P_k}{P_k}
+$$
 
 2. **One-dimensional oscillatory projection:**
 
 $$
-f(n) = \sum_{k=1}^{n} \cos\left( \sum_{j=1}^{k} \frac{P_{j+1} - P_j}{P_j} \right)
+\Large f(n) = \sum_{k=1}^{n} \cos\left( \sum_{j=1}^{k} \frac{P_{j+1} - P_j}{P_j} \right)
 $$
 
 3. **Two-dimensional phase features:**
 
 $$
-     \Largex_k = \sum_{i=1}^{k} \cos\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
+     \Large x_k = \sum_{i=1}^{k} \cos\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
      \quad,\quad
       y_k = \sum_{i=1}^{k} \sin\left( \sum_{j=1}^{i} \frac{P_{j+1} - P_j}{P_j} \right)
 $$
