@@ -27,9 +27,7 @@ This mimics **temporal learning**, though “time” here refers to **symbolic s
 
 1. **Percentage gap changes:**
 
-$$
-\Large \frac{P_{k+1} - P_k}{P_k}
-$$
+$$\Large \frac{P_{k+1} - P_k}{P_k}$$
 
 2. **One-dimensional oscillatory projection:**
 
