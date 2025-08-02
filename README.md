@@ -42,8 +42,6 @@ $$
 - Compare SKA learning trajectories over different feature representations.
 - Examine **entropy evolution** and **alignment metrics** for uncovering latent order or geometric resonance in prime distributions.
 
-Here is a polished version of your `README.md` file for the repository **SKA Prime Numbers**, including a `Structure` section placeholder and a touch of formatting refinement to enhance readability:
-
 
 ##  Why This Is Surprising
 
