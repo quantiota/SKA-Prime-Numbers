@@ -43,7 +43,7 @@ Unlike traditional number theory, which analyzes prime properties in a static or
 
 ##  Why This Is Surprising
 
-Prime gaps are famously irregular. However, by applying SKA and constructing transforms such as $f(n)$, we begin to see **bounded, wave-like patterns** emerge.
+Prime gaps are famously irregular. However, by applying SKA and constructing transforms such as $\large f(n)$, we begin to see **bounded, wave-like patterns** emerge.
 
 This suggests that what appears to be randomness may conceal **hidden phase regularities**—challenging classical assumptions and opening new interdisciplinary pathways between number theory, signal processing, and information geometry.
 
@@ -59,7 +59,7 @@ This suggests that what appears to be randomness may conceal **hidden phase regu
 * [ ] Compute the defined features over an initial range of primes
 * [ ] Launch real-time SKA learning on both features
 * [ ] Add live visualizations of entropy and cosine evolution
-* [ ] Explore **phase portraits** and **Fourier projections** of $f(n)$
+* [ ] Explore **phase portraits** and **Fourier projections** of $\large f(n)$
 
 
 
